@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Pinterest Downloader</string>
+    <string name="ringtone_maker">Ringtone Maker</string>
+    <string name="version_1_0">Version 1.0</string>
+    <string name="agree_term_of_service_and_policy">By continuing to use, you agree to\n
+our <b>Terms of Service</b>, <b>Privacy Policy</b> and <b>Disclaimer</b></string>
+    <string name="audio_editor">Audio Editor</string>
+    <string name="mix_audio">Mix Audio</string>
+    <string name="merge_mp3">Merge Mp3</string>
+    <string name="mp3_cutter">Mp3 Cutter</string>
+    <string name="audio_recorder">Audio Recorder</string>
+    <string name="more_tools">More tools</string>
+    <string name="video_to_mp3">Video to Mp3</string>
+    <string name="ringtone">Ringtone</string>
+    <string name="my_audio">My audio</string>
+    <string name="setting">Setting</string>
+    <string name="agree_and_continue">AGREE AND CONTINUE</string>
+    <string name="select_audio">Select audio</string>
+    <string name="next_0">Next(0)</string>
+    <string name="nothing_here_yet">Nothing here yet</string>
+    <string name="grant_permission">Please grant the application permission to continue using the app</string>
+    <string name="goto_settings">You must approve this permission in Permissions in the app settings on your device to continue using the app.</string>
+    <string name="settings">Settings</string>
+    <string name="media_has_stop_play">Media file has stopped playing.</string>
+    <string name="maximum_selection_is_two_files">Maximum selection is two files.</string>
+    <string name="search">Search</string>
+    <string name="sort_by">Sort by</string>
+    <string name="date">Date</string>
+    <string name="name">Name</string>
+    <string name="duration">Duration</string>
+    <string name="PinterestDownloader">Pinterest Downloader</string>
+    <string name="get">Get</string>
+    <string name="paste_an_pinterest_url">Paste an Pinterest Url</string>
+    <string name="share">Share</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="private_policy">Private Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="home_to_use">Home to use</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="download">Download</string>
+    <string name="downloading">Downloading...</string>
+    <string name="cancel">Cancel</string>
+    <string name="_0">0%</string>
+    <string name="successful_download">Successful Download</string>
+    <string name="ok">OK</string>
+    <string name="loading">Loading..</string>
+    <string name="playbtn">playBtn</string>
+    <string name="_00_00">00:00</string>
+    <string name="btndelete">btnDelete</string>
+    <string name="btnback">btnBack</string>
+    <string name="volume">Volume</string>
+    <string name="dad">ádad</string>
+
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="14dp"
+            android:background="?selectableItemBackground"
+            android:padding="8dp"
+            android:src="@drawable/ic_close"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imv_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivClose"
+            android:layout_margin="10dp"
+            android:src="@drawable/img_confirm"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imv_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agree And Start"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:paddingEnd="36dp"
+                android:paddingStart="36dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:background="@drawable/bg_btn_start"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvServiceAndPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:lineSpacingMultiplier="1.5"
+                android:textSize="12dp" />
+            
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

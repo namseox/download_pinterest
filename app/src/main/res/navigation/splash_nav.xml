@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splash_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.kma.travel.ui.splash.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_confirmFragment"
+            app:destination="@id/confirmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmFragment"
+        android:name="com.kma.travel.ui.splash.ConfirmFragment"
+        android:label="ConfirmFragment" >
+        <action
+            android:id="@+id/action_confirmFragment_to_policyAndTermFragment"
+            app:destination="@id/policyAndTermFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/policyAndTermFragment"
+        android:name="com.kma.travel.ui.splash.PolicyAndTermFragment"
+        android:label="PolicyAndTermFragment" >
+    <argument
+        android:name="param"
+        app:argType="integer"
+        android:defaultValue="0" />
+    </fragment>
+</navigation>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.05" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.95" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/frameLayoutTop"
+                    app:layout_constraintEnd_toEndOf="@id/guideline2"
+                    app:layout_constraintStart_toStartOf="@id/guideline1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="28dp"
+                    android:layout_width="0dp"
+
+                    android:layout_height="100dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:theme="@style/LoginTextInputLayoutStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:hint="@string/paste_an_pinterest_url"
+                        app:endIconDrawable="@drawable/ic_paste"
+                        app:endIconTint="@color/black"
+                        app:endIconMode="custom"
+                        app:errorEnabled="false"
+                        app:errorIconDrawable="@drawable/ic_edt_error"
+                        app:helperTextTextColor="#BA1A1A"
+                        app:hintTextColor="@color/black"
+                        app:layout_constraintEnd_toStartOf="@id/btnRefresh"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_link"
+                            android:singleLine="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="16sp">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btnRefresh"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="4dp"
+                        app:layout_constraintStart_toEndOf="@id/textInputLayout"
+                        app:layout_constraintTop_toTopOf="@id/textInputLayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@drawable/bg_btn_replay"
+                        android:src="@drawable/ic_loadreplay"
+                        android:layout_width="40dp"
+                        android:layout_height="54dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@id/guideline2"
+                    app:layout_constraintStart_toStartOf="@id/guideline1"
+                    app:layout_constraintTop_toBottomOf="@id/frameLayoutTop"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_get"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button_get_default"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/get"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_getCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:background="@drawable/bg_btn_get_selected"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/get"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_download"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:background="@drawable/bg_btn_get_selected"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/download"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+
+                        android:textSize="16sp" />
+                </FrameLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@id/guideline2"
+                    app:layout_constraintStart_toStartOf="@id/guideline1"
+                    app:layout_constraintTop_toBottomOf="@id/frameLayout">
+
+                    <TextView
+                        android:id="@+id/tvDuration"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="0:12"
+                        android:elevation="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginEnd="12dp"
+                        android:textColor="#938989"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:shapeAppearanceOverlay="@style/roundedImage10"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/imv_image"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/bg_thumbnail_img"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

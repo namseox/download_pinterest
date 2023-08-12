@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.kma.travel.ui.home.ViewModelHome" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cardView1"
+           app:cardCornerRadius="30dp"
+           android:layout_marginHorizontal="24dp"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:paddingHorizontal="16dp"
+               android:paddingVertical="24dp"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/tvDownloading"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   android:text="@string/downloading"
+                   android:textSize="14sp"
+                   android:fontFamily="@font/roboto_regular"
+                   android:textColor="#181818"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <TextView
+                   android:id="@+id/tvDurationDownload"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/tvDownloading"
+                   android:text="@string/_0"
+                   android:textSize="14sp"
+                   android:fontFamily="@font/roboto_medium"
+                   android:textColor="#F42A4A"
+                   android:layout_marginTop="2dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <com.google.android.material.progressindicator.LinearProgressIndicator
+                   android:id="@+id/numBerProgressBar"
+                   app:layout_constraintTop_toBottomOf="@id/tvDurationDownload"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   android:layout_marginTop="2dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:indeterminate="true"
+                   app:trackCornerRadius="2dp"
+                   app:indicatorColor="#F42A4A"
+                   app:trackColor="#D9D9D9"
+                   app:trackThickness="12dp"
+                   />
+
+               <TextView
+                   android:id="@+id/tvCancle"
+                   app:layout_constraintTop_toBottomOf="@id/numBerProgressBar"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   android:layout_marginTop="20dp"
+                   android:text="@string/cancel"
+                   android:textColor="#181818"
+                   android:textSize="14sp"
+                   android:fontFamily="@font/roboto_medium"
+                   android:layout_marginEnd="24dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+       </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:visibility="gone"
+            app:cardCornerRadius="30dp"
+            android:layout_marginHorizontal="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="24dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvDownloadSuccess"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="@string/successful_download"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="#181818"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnOk"
+                    app:layout_constraintTop_toBottomOf="@id/tvDownloadSuccess"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ok"
+                    android:padding="2dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/bg_btn_start"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
